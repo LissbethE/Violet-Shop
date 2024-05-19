@@ -48,14 +48,13 @@ app.use(cookieParser());
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
 
-  /*
   app.use('/uploads', express.static('/var/data/uploads'));
-  app.use(express.static(path.join(__dirname, '/frontend/dist')));*/
+  app.use(express.static(path.join(__dirname, '/frontend/dist/img')));
 
-  app.use(
+  /* app.use(
     '/uploads',
     express.static(path.join(__dirname, '/frontend/dist/img'))
-  );
+  );*/
 } else {
   const __dirname = path.resolve();
 
