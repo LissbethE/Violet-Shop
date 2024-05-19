@@ -21,14 +21,14 @@ export default defineConfig({
     // proxy requests prefixed '/api' and '/uploads'
     proxy: {
       '/uploads': {
-        target: 'https://violetshop.onrender.com',
+        target: 'https://violet-shop.onrender.com',
         changeOrigin: true,
         secure: false,
         agent: new http.Agent(),
       },
 
       '/api': {
-        target: 'https://violetshop.onrender.com',
+        target: 'https://violet-shop.onrender.com',
         changeOrigin: true,
         secure: false,
         agent: new http.Agent(),

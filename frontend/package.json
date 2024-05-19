@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "proxy": "https://violetshop.onrender.com",
+  "proxy": "https://violet-shop.onrender.com",
   "dependencies": {
     "@paypal/react-paypal-js": "^8.3.0",
     "@reduxjs/toolkit": "^2.2.0",

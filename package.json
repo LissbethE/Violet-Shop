@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm i && cd frontend && npm i && npm run build"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://violet-shop.onrender.com",
   "author": "Lissbeth Escobar Cisneros",
   "license": "MIT",
   "dependencies": {
