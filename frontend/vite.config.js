@@ -25,6 +25,7 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         agent: new http.Agent(),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
 
       '/api': {
@@ -32,6 +33,7 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         agent: new http.Agent(),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
