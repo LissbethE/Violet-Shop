@@ -1,0 +1,121 @@
+.button {
+  font: inherit;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--on-color-text);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in;
+
+  @include respond(breakp-500) {
+    font-size: 1.4rem;
+  }
+
+  &--round {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 50%;
+    color: var(--on-color-text-variant);
+    background-color: var(--on-color-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease-in;
+
+    &:hover,
+    &:active {
+      outline: 2px solid var(--on-color-primary);
+      outline-offset: 0.3rem;
+    }
+  }
+
+  &--primary {
+    color: var(--on-color-text-variant);
+    background-color: var(--on-color-primary);
+
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+
+    position: relative;
+    transition: all 0.2s;
+
+    &--small {
+      font-size: 1.3rem;
+      padding: 0.5rem 1rem;
+    }
+
+    &--transparent {
+      color: var(--on-color-primary);
+      background-color: transparent;
+      border: 1px solid var(--on-color-primary);
+    }
+
+    &--dark {
+      color: var(--on-color-text-variant);
+      background-color: var(--on-color-text);
+    }
+
+    &--white {
+      color: var(--on-color-primary);
+      background-color: var(--on-color-text-variant);
+    }
+
+    &::before {
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background-color: inherit;
+
+      transition: all 0.4s;
+    }
+
+    &:hover::before {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+
+    &--transparent:hover::before {
+      background-color: var(--on-color-primary);
+    }
+
+    &--dark:hover::before {
+      background-color: var(--on-color-text);
+    }
+
+    &--white:hover::before {
+      background-color: var(--on-color-text-variant);
+    }
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(-0.1rem) scale(0.98);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &--secondary {
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.btnHover {
+  font: inherit;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--on-color-text);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in;
+
+  @include respond(breakp-500) {
+    font-size: 1.4rem;
+  }
+
+  &--twoElements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &--modal {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+
+    @include respond(bp-800) {
+      right: 3rem;
+      top: 1rem;
+    }
+  }
+
+  &--modal &__icon {
+    width: 3rem;
+    height: 3rem;
+
+    @include respond(smallPhone) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    fill: var(--on-color-text);
+    line-height: 0;
+
+    transition: all 0.2s ease-in;
+
+    &--white-footer {
+      fill: var(--on-color-text-variant);
+    }
+
+    &--rotate90 {
+      transform: rotate(-90deg);
+
+      @include respond(phone) {
+        transform: rotate(0);
+      }
+    }
+
+    &--rotate180 {
+      transform: rotate(-180deg);
+    }
+
+    @include respond(breakp-500) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    &--product {
+      @include respond(breakp-500) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &--active {
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--on-color-box);
+
+    transform: rotate(5deg) scale(1.1); // 1.3
+  }
+
+  &:hover > *,
+  &--active > * {
+    color: var(--on-color-primary);
+    fill: var(--on-color-primary);
+  }
+
+  &:hover &__icon {
+    &--white-footer {
+      fill: var(--color-text-light);
+    }
+  }
+}

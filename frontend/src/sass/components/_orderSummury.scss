@@ -1,0 +1,42 @@
+.summury {
+  flex: 1 1 30rem;
+  padding: 4rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--on-color-primary);
+
+  @include respond(phone) {
+    flex: 1;
+  }
+
+  @include respond(smallPhone) {
+    flex: 1 1 100%;
+  }
+
+  &--order {
+    width: 100%;
+  }
+
+  &__content {
+    color: var(--on-color-text-variant);
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p {
+      font-size: 1.8rem;
+    }
+
+    &--total {
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid var(--on-color-text-variant);
+    }
+  }
+
+  &__box:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

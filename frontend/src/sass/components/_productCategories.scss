@@ -1,0 +1,97 @@
+.productCategories {
+  width: 100%;
+  height: 80vh;
+
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 1px solid var(--on-color-primary);
+  background-color: var(--on-background);
+  box-shadow: var(--box-shadow);
+
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  z-index: 2000;
+
+  @include respond(bp-1100) {
+    top: 13rem;
+  }
+
+  @include respond(tab-portrait) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 0 1rem;
+
+    top: 17rem;
+  }
+
+  @include respond(breakp-500) {
+    //  top: 10rem;
+  }
+
+  &__box {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+
+    &:nth-child(1) {
+      border-right: 1px solid var(--on-color-primary);
+
+      @include respond(phone) {
+        overflow-y: hidden;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--on-color-primary);
+      }
+    }
+
+    //////////////////////
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &:hover::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: var(--on-color-primary);
+      border-radius: 20px;
+    }
+
+    //////////////////////
+  }
+
+  &__menu {
+    width: 100%;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    @include respond(phone) {
+      flex-direction: row;
+      grid-column: 1 /-1;
+      padding: 3rem;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.profile {
+  &__container {
+    max-width: 100rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, auto); // 1fr
+    gap: 2rem;
+
+    @include respond(bp-700) {
+      gap: 1rem;
+      grid-template-columns: 1fr 1.5fr;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr auto;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+
+  &__buttons {
+    grid-column: 1 /2;
+    grid-row: 4 / -1;
+
+    /*
+        align-self: center;
+    justify-self: center;
+    */
+
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 3rem;
+
+    @include respond(phone) {
+      grid-column: 1 /-1;
+      grid-row: 4 / -1;
+    }
+  }
+}

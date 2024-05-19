@@ -1,0 +1,72 @@
+html {
+  font-size: 62.5%;
+
+  ///////////////////////////////////
+  // if width <= 900px
+  @include respond(tab-portrait) {
+    font-size: 56.25%; // 9px
+  }
+
+  // width <= 600
+  @include respond(phone) {
+    font-size: 50%; // 8px
+  }
+
+  // if width <= 400px
+  @include respond(smallPhone) {
+    font-size: 43.75%; // 7px
+  }
+
+  // width >= 1800px
+  @include respond(big-desktop) {
+    font-size: 100%; // 16px
+  }
+
+  // width >= 2000px
+  @include respond(big-desktop-2) {
+    font-size: 125%; // 20px
+  }
+
+  ///////////////////////////////////
+  /* Scroll Smoothly */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  padding: 3rem;
+  background-color: var(--on-background);
+
+  @include respond(phone) {
+    padding: 2rem; // 2
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--on-color-primary);
+    border-radius: 20px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}

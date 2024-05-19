@@ -1,0 +1,96 @@
+.search {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 10rem;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+
+  @include respond(breakp-500) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    width: 16rem; // 16
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+
+    @include respond(breakp-500) {
+      width: 16rem;
+    }
+  }
+
+  &__btn {
+    background: none;
+
+    width: 3.5rem; // 3.5
+    height: 3.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: 0.2rem solid var(--on-color-primary);
+
+    transition: all 1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(breakp-500) {
+      width: 3rem; // 3.5
+      height: 3rem;
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    line-height: 0;
+    display: flex;
+    fill: var(--on-color-primary);
+
+    @include respond(breakp-500) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    font: inherit;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    border-radius: 10rem;
+    padding: 0 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 0;
+    border: 0;
+    background: none;
+    color: var(--on-color-text);
+
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  &:hover &__input,
+  &:active &__input,
+  &:focus &__input {
+    opacity: 1;
+    background-color: var(--on-color-box);
+  }
+
+  &:hover &__btn {
+    border: 0.2rem solid transparent;
+    background-color: var(--on-color-primary);
+  }
+
+  &:hover &__icon {
+    fill: var(--on-color-text-variant);
+  }
+}

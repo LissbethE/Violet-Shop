@@ -1,0 +1,124 @@
+.order {
+  &__container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 1rem;
+
+    @include respond(bp-800) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+
+    &--details {
+      align-items: flex-start;
+      column-gap: 3rem;
+    }
+  }
+
+  &__col-2,
+  &__cartSummury {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__heading-3 {
+    font-size: 3.5rem;
+    font-family: $font-bad-script;
+    color: var(--on-color-primary);
+  }
+
+  ////////////////////////
+
+  &__cartSummury {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  ////////////////////////
+  ///
+  &__paragraph {
+    padding: 0 1rem;
+
+    & span {
+      font-weight: 600;
+      font-size: 1.7rem;
+      margin-right: 1rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__payment {
+    padding: 0 1rem;
+
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+
+  &__products {
+    padding: 0 1rem;
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @include respond(smallPhone) {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__bg-img {
+    width: 6rem;
+    height: auto;
+
+    background-image: url('/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+
+    // padding: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  &__price {
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    & span:nth-child(3) {
+      color: var(--on-color-primary);
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    @include respond(smallPhone) {
+      margin-left: 0;
+    }
+  }
+}

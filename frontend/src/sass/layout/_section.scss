@@ -1,0 +1,31 @@
+.section-padding {
+  padding: 10rem 0; // 15 5
+
+  @include respond(bp-700) {
+    padding: 5rem 0;
+  }
+}
+
+.section-padding-small {
+  padding: 3rem 0; // 15 5
+
+  @include respond(bp-700) {
+    padding: 2rem 0;
+  }
+}
+
+.section-padding-small-2 {
+  padding: 5rem 0; // 15 5
+
+  @include respond(bp-700) {
+    padding: 2rem 0;
+  }
+}
+
+.section-padding-shipping {
+  padding: 3rem 7rem; // 15 5
+
+  @include respond(tab-portrait) {
+    padding: 2rem 0;
+  }
+}

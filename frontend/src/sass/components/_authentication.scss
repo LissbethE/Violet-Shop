@@ -1,0 +1,40 @@
+.authentication {
+  // background-color: pink;
+  // width: Max(5.5vw, 35rem);
+  width: 60vw; // 55
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+
+  padding: 3rem 0rem 2rem 0rem;
+
+  ///////////////////////////////
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--on-color-primary);
+    border-radius: 20px;
+  }
+
+  ///////////////////////////////
+
+  @include respond(tab-portrait) {
+    width: 80vw;
+  }
+}
+
+.login,
+.signup {
+  flex-grow: 1;
+  //background-color: lime;
+}

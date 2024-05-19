@@ -1,0 +1,72 @@
+///////////////////////////
+// C O L O R
+
+:root {
+  &,
+  &.light-mode {
+    --color-primary: #8e24aa;
+    --color-secondary: #ff006a;
+    --color-tertiary: #a71313;
+    --color-quartarary: rgba(254, 152, 0, 0.8);
+    --color-lawngreen: rgba(126, 252, 0, 0.8);
+
+    --color-text-light: #f0f3f7;
+    --box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #afafaf;
+
+    // ----------
+
+    --on-color-primary: #8e24aa;
+    --on-color-primary-variant: #db57ff;
+
+    --on-color-text: #121212de; // #121212de
+    --on-color-text-variant: #f0f3f7;
+
+    --on-background: #f0f3f7;
+    --on-background-variant: #121212;
+
+    --color-bg-tertiary: rgba(255, 110, 110, 0.3);
+
+    --on-color-table: rgba(235, 235, 235, 0.9);
+
+    //  --on-color-card: #ffffff;
+
+    // ----------
+
+    --gradient: radial-gradient(
+      circle,
+      rgba(141, 36, 170, 0.7),
+      rgba(169, 91, 189, 0.7),
+      rgba(196, 137, 208, 0.7),
+      rgba(220, 183, 226, 0.7),
+      rgba(243, 229, 245, 0.7)
+    );
+  }
+
+  &.dark-mode {
+    --on-color-primary: #db57ff;
+
+    --on-color-text: #f0f3f7; // #f7f7f7de
+    --on-color-text-variant: #121212;
+
+    --on-background: #121212;
+    --on-background-variant: #f0f3f7;
+
+    --on-color-box: rgba(39, 39, 39, 0.8);
+
+    // --on-color-card: rgba(39, 39, 39, 0.8);
+
+    --on-color-table: rgba(39, 39, 39, 0.9);
+
+    --color-bg-tertiary: rgba(255, 165, 165, 0.9); // rgba(255, 110, 110, 0.9)
+  }
+}
+
+///////////////////////////
+// T E X T  S T Y L E
+$font-bad-script: 'Bad Script', cursive;
+$font-sans-serif: 'Montserrat', sans-serif;
+$fontSize-default: 1.6rem;

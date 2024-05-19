@@ -1,0 +1,64 @@
+.promo {
+  width: 100%;
+
+  height: 3.5rem;
+  border-radius: 1rem;
+  color: var(--on-color-text-variant);
+  background-color: var(--on-background-variant);
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    backface-visibility: hidden;
+    position: absolute;
+
+    animation: moving 30s linear infinite;
+
+    @include respond(phone) {
+      width: auto;
+    }
+
+    & > p {
+      white-space: nowrap;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    @include respond(breakp-500) {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__price {
+    color: var(--on-color-primary-variant);
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-left: 0.3rem;
+
+    @include respond(breakp-500) {
+      font-size: 1rem;
+      margin-left: 0rem;
+    }
+  }
+}

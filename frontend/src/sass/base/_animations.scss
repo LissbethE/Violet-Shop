@@ -1,0 +1,39 @@
+@keyframes moving {
+  0% {
+    //left: -100%;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/////////////////////////////////////////
+.hover-link {
+  transition: all 0.2s ease-in;
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: inherit;
+    background-color: inherit;
+  }
+
+  &:hover,
+  &:active {
+    //padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    box-shadow: var(--box-shadow);
+    color: var(--on-color-primary);
+
+    transform: rotate(5deg) scale(1.1); // 1.3
+
+    background-color: var(--on-color-box);
+  }
+
+  &:hover svg {
+    fill: var(--on-color-primary);
+  }
+}

@@ -1,0 +1,160 @@
+.form {
+  padding: 0 1rem;
+
+  & .star {
+    // margin-left: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.formRow {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 24rem 1fr;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  column-gap: 3rem;
+  row-gap: 1rem;
+
+  padding: 1.2rem 0;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &:has(button) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+
+    // gap: 1.2rem;
+  }
+
+  &__label {
+    font: inherit;
+    font-weight: 600;
+    color: var(--on-color-primary);
+
+    @include respond(phone) {
+      margin-left: 1rem;
+    }
+  }
+
+  & input,
+  & textarea {
+    width: 100%;
+    font: inherit;
+    color: var(--on-color-text);
+
+    background-color: transparent;
+    border: 1px solid var(--color-gray);
+    border-radius: 10rem;
+    padding: 0.8rem 2rem;
+
+    outline: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      border: 1px solid var(--on-color-primary);
+    }
+  }
+
+  & textarea {
+    border-radius: 1rem;
+  }
+
+  & .inputFile {
+    width: auto;
+    font: inherit;
+    color: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+
+    outline: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      border: none;
+    }
+  }
+
+  & .inputFile::file-selector-button {
+    font: inherit;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem;
+
+    border: none;
+    border-radius: 10rem;
+    color: var(--on-color-text-variant);
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+
+    &:hover {
+      background-color: var(--on-color-primary);
+    }
+  }
+
+  & p {
+    grid-column: 2 /-1;
+    grid-row: 2 /-1;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-tertiary);
+    background-color: var(--color-bg-tertiary);
+    padding: 0.5rem;
+    padding-left: 2rem;
+    border-radius: 1rem;
+
+    @include respond(phone) {
+      grid-column: 1 /-1;
+      grid-row: 3 /-1;
+    }
+  }
+
+  ////////////////////////////////
+
+  &--radio {
+    width: 30rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+
+    @include respond(phone) {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: repeat(2, auto);
+    }
+
+    & > p {
+      grid-column: 1 /-1;
+      grid-row: 2 /-1;
+    }
+
+    & > label {
+      font-size: 2rem;
+    }
+
+    & > input[type='radio'] {
+      cursor: pointer;
+
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+[
+  {
+    "_id": "1",
+    "name": "Solid Color Round Neck Loose Fit Casual Sweater",
+    "image": "sweater-1.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "sweater",
+    "size": ["XS", "S", "M", "L", "XL"],
+    "price": 12.5,
+    "discount": 0,
+    "countInStock": 10,
+    "rating": 4,
+    "numReviews": 12
+  },
+
+  {
+    "_id": "2",
+    "name": "Solid Drop Shoulder Sweater",
+    "image": "sweater-2.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "sweater",
+    "size": ["XS", "S", "M", "L", "XL"],
+    "price": 15.99,
+    "discount": 0,
+    "countInStock": 7,
+    "rating": 5,
+    "numReviews": 8
+  },
+
+  {
+    "_id": "3",
+    "name": "Drop Shoulder Button Down T-shirt",
+    "image": "shirt.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "shirt",
+    "size": ["XS", "S", "M", "L", "XL"],
+    "price": 9,
+    "discount": 0,
+    "countInStock": 15,
+    "rating": 6,
+    "numReviews": 12
+  },
+
+  {
+    "_id": "4",
+    "name": "High Waisted Straight Leg Jeans",
+    "image": "pant-1.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "pant",
+    "size": ["S", "M", "L"],
+    "price": 25.99,
+    "discount": 0,
+    "countInStock": 11,
+    "rating": 8,
+    "numReviews": 12
+  },
+
+  {
+    "_id": "5",
+    "name": "Ripped Straight Leg Jeans",
+    "image": "pant-2.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "pant",
+    "size": ["XS", "S", "M", "L"],
+    "price": 30,
+
+    "discount": -10,
+    "countInStock": 7,
+    "rating": 7,
+    "numReviews": 10
+  },
+
+  {
+    "_id": "6",
+    "name": "Size Women's Elastic Waistband Wide Leg Pant With Cuffed Hem",
+    "image": "pant-3.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "pant",
+    "size": ["S", "M", "L", "XL", "1XL", "2XL"],
+    "price": 18.99,
+    "discount": 0,
+    "countInStock": 5,
+    "rating": 9,
+    "numReviews": 12
+  },
+
+  {
+    "_id": "7",
+    "name": "Women's Ankle Boots",
+    "image": "shoe-1.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "shoe",
+    "size": ["US5.5", "US6", "US7.5", "US8", "US8.5", "US9"],
+    "price": 30,
+    "discount": 0,
+    "countInStock": 5,
+    "rating": 10,
+    "numReviews": 12
+  },
+
+  {
+    "_id": "8",
+    "name": "Women's Solid Color Fashion Boots With Side Zipper, Lace-up.",
+    "image": "shoe-2.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "shoe",
+    "size": ["US5.5", "US6", "US7.5", "US8", "US8.5", "US9"],
+    "price": 45,
+    "discount": 0,
+    "countInStock": 8,
+    "rating": 8,
+    "numReviews": 2
+  },
+
+  {
+    "_id": "9",
+    "name": "Beige Sneakers With Laces For Women.",
+    "image": "shoe-3.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "shoe",
+    "size": ["US5.5", "US6", "US7.5", "US8"],
+    "price": 35,
+    "discount": -5,
+    "countInStock": 8,
+    "rating": 3,
+    "numReviews": 7
+  },
+
+  {
+    "_id": "10",
+    "name": "Fashionable Women's Large Capacity Bag With Pendant And Adjustable Shoulder Strap.",
+    "image": "bag-1.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "bag",
+    "size": ["one-size"],
+    "price": 55,
+    "discount": -7,
+    "countInStock": 4,
+    "rating": 6,
+    "numReviews": 4
+  },
+
+  {
+    "_id": "11",
+    "name": "Bucket Shoulder Bags.",
+    "image": "bag-2.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "bag",
+    "size": ["one-size"],
+    "price": 65,
+    "discount": -8,
+    "countInStock": 13,
+    "rating": 7,
+    "numReviews": 17
+  },
+
+  {
+    "_id": "12",
+    "name": "Mini square bag.",
+    "image": "bag-3.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "bag",
+    "size": ["one-size"],
+    "price": 38.99,
+    "discount": 0,
+    "countInStock": 9,
+    "rating": 8,
+    "numReviews": 6
+  },
+
+  {
+    "_id": "13",
+    "name": "Jazz hat, wide brim sun hat suitable for daily use.",
+    "image": "hat-1.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "hat",
+    "size": ["one-size"],
+    "price": 8.76,
+    "discount": -6,
+    "countInStock": 9,
+    "rating": 5,
+    "numReviews": 2
+  },
+
+  {
+    "_id": "14",
+    "name": "Adjustable Breathable Washed Neutral Vintage Cap ",
+    "image": "hat-2.jpg",
+    "description": "Lorem ipsum dolor sit amet. Qui iure maxime non tempora perferendis rem voluptatem sint ut dicta debitis. Ad vitae galisum quo ducimus deserunt ut deserunt voluptates.",
+    "category": "hat",
+    "size": ["one-size"],
+    "price": 2.2,
+    "discount": 0,
+    "countInStock": 8,
+    "rating": 9,
+    "numReviews": 7
+  }
+]

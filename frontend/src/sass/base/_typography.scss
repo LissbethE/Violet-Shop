@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: $font-sans-serif;
+  font-size: $fontSize-default;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  color: var(--on-color-text);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.heading-1 {
+  font-size: Max(6vw, 2rem);
+  font-family: $font-bad-script;
+  letter-spacing: 0.3rem;
+  color: var(--on-color-text);
+
+  &--table {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--on-color-primary);
+    font-family: $font-sans-serif;
+    letter-spacing: 0.1rem;
+  }
+
+  &--orders {
+    font-size: 5rem;
+    color: var(--on-color-primary);
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+
+  &--hero {
+    color: var(--color-text-light);
+  }
+
+  &--allProd {
+    font-size: Max(4.5vw, 2rem);
+    text-align: center;
+    color: var(--on-color-primary);
+    letter-spacing: 0.2rem;
+  }
+
+  &--auth {
+    font-size: Max(4vw, 3.5rem);
+    text-align: center;
+    color: var(--on-color-primary);
+    letter-spacing: 0.2rem;
+  }
+
+  &--shipping {
+    font-size: Max(3vw, 3.5rem);
+
+    // text-align: center;
+    color: var(--on-color-primary);
+    letter-spacing: 0rem;
+  }
+}
+
+.heading-2 {
+  font-size: Max(3vw, 3rem);
+  font-family: $font-bad-script;
+  font-weight: 800;
+  line-height: 1.3;
+
+  &--review {
+    font-family: $font-sans-serif;
+    font-size: 2.5rem;
+  }
+
+  &--products {
+    font-size: Max(2vw, 3rem);
+    color: var(--on-color-primary);
+    padding: 0 3rem;
+    // border-bottom: 0.1px dotted var(--on-color-primary);
+  }
+
+  &--prodFeature {
+    //font-family: $font-sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 0rem;
+    text-align: center;
+    color: var(--on-color-primary);
+  }
+
+  &--order {
+    font-size: 3rem;
+    font-family: $font-sans-serif;
+    letter-spacing: 0.1rem;
+    color: var(--on-color-primary);
+
+    & span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &--user {
+    font-size: 3rem;
+    color: var(--on-color-primary);
+  }
+}
+
+.heading-3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  &--white {
+    font-size: 2rem;
+    color: var(--on-color-text-variant);
+  }
+
+  &--order {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    //font-style: italic;
+    color: var(--on-color-primary);
+    border-bottom: 1px dotted var(--on-color-primary);
+  }
+
+  &--userData {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    //color: var(--on-color-primary);
+  }
+}
+
+.heading-4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+
+  &--cart {
+    font-weight: 600;
+  }
+
+  &--proOrder {
+    width: 30vw;
+
+    @include respond(bp-800) {
+      width: 50vw;
+    }
+
+    @include respond(smallPhone) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &--review {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+}
+
+.paragraph {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--on-color-text);
+
+  &--small-size {
+    font-size: 1.2rem;
+  }
+
+  &--hero {
+    color: var(--color-text-light);
+  }
+
+  &--medium {
+    font-size: 1.8rem;
+  }
+
+  &--cart {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+  }
+
+  &--cartSum {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--on-color-text-variant);
+    letter-spacing: 0.1rem;
+  }
+
+  &--auth {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &--account {
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    & span {
+      margin-left: 0.5rem;
+      color: var(--on-color-primary);
+      cursor: pointer;
+
+      transition: 0.3s ease-in;
+
+      &:hover {
+        font-weight: 600;
+        border-bottom: 1px solid var(--on-color-primary);
+      }
+    }
+  }
+
+  &--review {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--color-gray);
+    margin-top: 1rem;
+  }
+}
+
+.small-paragraph {
+  font-size: 1.2rem;
+
+  @include respond(breakp-500) {
+    font-size: 1rem;
+  }
+}
+
+.small {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: -1.5rem;
+  letter-spacing: 0.2rem;
+
+  &__price {
+    color: var(--color-text-light);
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+  }
+
+  &--hero {
+    color: var(--color-text-light);
+    margin-top: 0.5rem;
+  }
+}
+
+.square {
+  padding: 1rem 3rem;
+  background-color: var(--color-primary);
+
+  transform: skewX(-25deg);
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    transform: skewX(25deg);
+    color: var(--color-text-light);
+  }
+}
+
+.results {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 0;
+  margin-right: 0.5rem;
+  color: var(--on-color-text);
+}

@@ -1,0 +1,129 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+///////////////////////////////////
+// MARGIN BOTTOM
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-small-2 {
+  margin-bottom: 2.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-por) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-por) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+///////////////////////////////////
+// MARGIN TOP
+.u-margin-top-small {
+  margin-top: 1.5rem !important;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+///////////////////////////////////
+// NO SHOW
+
+.noShow {
+  @include respond(phone) {
+    opacity: 0 !important;
+    display: none !important;
+  }
+}
+
+.error {
+  font-size: 2rem;
+  color: var(--color-tertiary);
+  font-weight: 700;
+}
+
+.errorMessage {
+  padding: 1rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-tertiary);
+  background-color: var(--color-bg-tertiary);
+
+  border-radius: 1rem;
+}
+
+.correctMessage {
+  padding: 1rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--on-color-text);
+  background-color: var(--color-lawngreen);
+
+  border-radius: 1rem;
+}
+
+.border-top {
+  padding-top: 4rem;
+  border-top: 1px solid var(--on-color-primary);
+}
+
+.ele-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerImage {
+  max-width: 100%;
+  height: 20rem; //25rem
+
+  @include respond(phone) {
+    height: 30rem; //20rem
+  }
+
+  background-image: url('/img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--small {
+    width: 10rem;
+    height: 8rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}

@@ -1,0 +1,27 @@
+.footer {
+  background-color: var(--on-background-variant);
+  border-radius: 1rem;
+  padding: 5rem 5rem 2rem 5rem;
+  text-align: center;
+
+  &__content {
+    border-bottom: 1px solid var(--on-color-text-variant);
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__icons {
+    & button:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__copyright {
+    color: var(--on-color-text-variant);
+    font-size: 1.3rem;
+  }
+}

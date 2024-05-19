@@ -1,0 +1,275 @@
+// User Data
+
+.cards {
+  background-color: var(--on-color-box);
+  box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+
+  @include respond(bp-700) {
+    padding: 1rem;
+  }
+
+  @include respond(phone) {
+    padding: 2rem;
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  fill: var(--on-color-text);
+  line-height: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  //background-color: pink;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+
+  & span {
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    // letter-spacing: 0.1rem;
+  }
+}
+
+///////////////////////////
+/*.updatePassword {
+  @extend .card;
+
+  grid-column: 2 /-1;
+  grid-row: 5 / -1;
+}*/
+
+.userCard {
+  @extend .cards;
+
+  grid-column: 1 /2;
+  grid-row: 1 / 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(phone) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  &__box-photo {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 96% 48% 63% 87% / 87% 65% 66% 70%;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 96% 48% 63% 87% / 87% 65% 66% 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__paragraph {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1.6rem;
+  }
+
+  &__icon {
+    @extend .icon;
+
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+
+.userPhoto-small {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 96% 48% 63% 87% / 87% 65% 66% 70%;
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 96% 48% 63% 87% / 87% 65% 66% 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+
+///////////////////////////
+
+.userData {
+  @extend .cards;
+
+  grid-column: 2 /-1;
+  grid-row: 1/ 3;
+
+  @include respond(phone) {
+    grid-column: 1 /-1;
+    grid-row: 2 / 3;
+  }
+
+  &__box-title {
+    display: flex;
+    justify-content: space-between;
+    // border-bottom: 1px dotted var(--on-color-primary);
+  }
+
+  &__icon {
+    @extend .icon;
+  }
+
+  &__content {
+    @extend .content;
+  }
+
+  &__paragraph {
+    @extend .paragraph;
+  }
+}
+
+///////////////////////////
+
+.userAddress {
+  @extend .cards;
+
+  grid-column: 2 /-1;
+  grid-row: 3/ -1;
+
+  @include respond(phone) {
+    grid-column: 1 /-1;
+    grid-row: 3 / 4;
+  }
+
+  &__box-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    @extend .icon;
+  }
+
+  &__content {
+    @extend .content;
+  }
+
+  &__paragraph {
+    @extend .paragraph;
+  }
+}
+
+///////////////////////////
+
+.editUserData {
+  width: 60vw; // 70
+  height: 85vh;
+
+  @include respond(tab-portrait) {
+    width: 80vw;
+  }
+
+  ///////////////////////////////
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--on-color-primary);
+    border-radius: 20px;
+  }
+
+  ///////////////////////////////
+}
+
+.editAddress {
+  width: 60vw; // 55
+  height: 85vh;
+
+  @include respond(tab-portrait) {
+    width: 80vw;
+  }
+}
+
+.updateUser {
+  width: 60vw; // 55
+  height: 85vh;
+
+  padding: 3rem 2rem;
+
+  ///////////////////////////////
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--on-color-primary);
+    border-radius: 20px;
+  }
+
+  ///////////////////////////////
+
+  @include respond(tab-portrait) {
+    width: 80vw;
+  }
+
+  @include respond(tab-portrait) {
+    width: 80vw;
+  }
+}
+
+.userAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 96% 48% 63% 87% / 87% 65% 66% 70%;
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 96% 48% 63% 87% / 87% 65% 66% 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}

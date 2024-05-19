@@ -1,0 +1,98 @@
+.nav {
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  position: relative;
+
+  @include respond(bp-1100) {
+    padding: 2rem 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1rem;
+  }
+
+  @include respond(breakp-500) {
+    //padding: 1rem;
+    // height: 10rem;
+    //  background-color: pink;
+  }
+
+  &__list {
+    height: 100%;
+    //   background-color: lime;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2rem;
+
+    @include respond(bp-1100) {
+      grid-column: 1 / -1;
+      grid-row: 2/ -1;
+
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 3 / -1;
+    }
+
+    @include respond(breakp-500) {
+      gap: 2rem;
+    }
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    color: var(--on-color-text);
+    white-space: nowrap;
+    cursor: pointer;
+
+    &--categories {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    @include respond(breakp-500) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // background-color: rgb(255, 145, 0);
+    gap: 1.5rem;
+
+    @include respond(bp-1100) {
+      grid-column: 2 / -1;
+      grid-row: 1/ 2;
+    }
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 2 /3;
+
+      justify-content: center;
+    }
+
+    @include respond(breakp-500) {
+      gap: 1rem;
+    }
+  }
+}
