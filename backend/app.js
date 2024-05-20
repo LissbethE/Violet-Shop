@@ -44,18 +44,20 @@ app.use(cookieParser());
 // 2) ROUTES
 
 //app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === 'production') {
-  /*
-  app.use('/uploads', express.static('/var/data/uploads'));
-  app.use(express.static(path.join(__dirname, '/frontend/dist')));*/
+  const __dirname = path.resolve();
 
-  app.use(
+  app.use('/uploads', express.static('/var/data/uploads'));
+  app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+  /* app.use(
     '/uploads',
     express.static(path.join(__dirname, '/frontend/dist/img'))
-  );
+  );*/
 } else {
+  const __dirname = path.resolve();
+
   app.use(
     '/uploads',
     express.static(path.join(__dirname, '/frontend/public/img'))
@@ -78,7 +80,8 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) =>
     res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
   );
-}*/
+}
+*/
 
 app.use(notFound);
 app.use(errorHandler);
