@@ -58,7 +58,7 @@ app.use(compression());
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
 
-  app.use('/uploads', express.static('dist'));
+  app.use('/uploads', express.static('/frontend/dist'));
   app.use(express.static(path.join(__dirname, '/frontend/dist/img')));
 
   /* app.use(
@@ -83,7 +83,6 @@ app.get('/api/v1/config/paypal', (req, res) =>
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
 );
 
-/*
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
 
@@ -91,7 +90,6 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
   );
 }
-*/
 
 app.use(notFound);
 app.use(errorHandler);
