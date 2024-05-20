@@ -85,3 +85,5 @@ export default router;
 
 // frontend/public/img
 // /${req.file.path.replace(/\\/g, '/')}
+// uploads/
+// frontend/dist/img

@@ -76,7 +76,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    // background-color: rgb(255, 145, 0);
     gap: 1.5rem;
 
     @include respond(bp-1100) {
@@ -92,7 +91,7 @@
     }
 
     @include respond(breakp-500) {
-      gap: 1rem;
+      gap: 2rem;
     }
   }
 }

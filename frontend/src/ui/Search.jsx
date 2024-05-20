@@ -26,7 +26,7 @@ function Search() {
         value={query}
         onChange={(e) => {
           e.preventDefault();
-          setQuery(e.target.value);
+          setQuery(e.target.value.toLowerCase());
         }}
         ref={inputEl}
       />

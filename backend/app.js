@@ -5,6 +5,9 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
+import mongoSanitize from 'express-mongo-sanitize';
+import compression from 'compression';
+
 import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
@@ -40,10 +43,17 @@ app.use(express.json({ limit: '10kb' }));
 // Parse the data from the cookie
 app.use(cookieParser());
 
+// Date Sanitization against NoSQL query injection
+app.use(mongoSanitize());
+
+// compress all the text that is sent to client. not img
+app.use(compression());
+
 //////////////////////////////////
 // 2) ROUTES
 
 //app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+// /var/data/uploads
 
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.resolve();
