@@ -53,9 +53,8 @@ function App() {
           <Suspense fallback={<SpinnerHeart />}>
             <PayPalScriptProvider deferLoading={true}>
               <Routes>
-                <Route element={<AppLayout />}>
-                  <Route index element={<Navigate replace to="/" />} />
-                  <Route path="/" element={<Home />} />
+                <Route path="/" element={<AppLayout />}>
+                  <Route index={true} path="/" element={<Home />} />
                   <Route path="product" element={<AllProducts />} />
                   <Route path="product/:id" element={<ProductDetails />} />
                   <Route
