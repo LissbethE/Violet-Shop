@@ -52,13 +52,12 @@ app.use(compression());
 //////////////////////////////////
 // 2) ROUTES
 
+const __dirname = path.resolve();
 //app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 // /var/data/uploads
 
 if (process.env.NODE_ENV === 'production') {
-  const __dirname = path.resolve();
-
-  app.use('/uploads', express.static('/var/data/uploads'));
+  //  app.use('/uploads', express.static('/var/data/uploads'));
   app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
   /* app.use(
@@ -66,8 +65,6 @@ if (process.env.NODE_ENV === 'production') {
     express.static(path.join(__dirname, '/frontend/dist/img'))
   );*/
 } else {
-  const __dirname = path.resolve();
-
   app.use(
     '/uploads',
     express.static(path.join(__dirname, '/frontend/public/img'))
@@ -83,14 +80,11 @@ app.get('/api/v1/config/paypal', (req, res) =>
   res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
 );
 
-/*
 if (process.env.NODE_ENV === 'production') {
-  const __dirname = path.resolve();
-
   app.get('/', (req, res) =>
     res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'))
   );
-}*/
+}
 
 app.use(notFound);
 app.use(errorHandler);

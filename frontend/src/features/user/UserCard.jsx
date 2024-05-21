@@ -11,6 +11,7 @@ function UserCard() {
     <div className="userCard">
       <div className="userCard__box-photo u-margin-bottom-small">
         <img src={`/img/${user.image}`} className="userCard__photo" />
+        <img src={`${user?.image}`} className="userCard__photo" />
       </div>
 
       <h2 className="heading-2 heading-2--user u-margin-bottom-small-2">
