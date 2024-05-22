@@ -7,7 +7,7 @@ Violet's Shop e-commerce website was built using MERN, Redux Toolkit, React-quer
 </h3>
 
 <div align=center>
-<img src="/uploads/violetshop.png"  width="90%"/>
+<img src="/uploads/H-VioletShop.png"  width="90%"/>
 </div>
 
 <br/>

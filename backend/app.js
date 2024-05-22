@@ -54,16 +54,9 @@ app.use(compression());
 
 const __dirname = path.resolve();
 //app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-// /var/data/uploads
 
 if (process.env.NODE_ENV === 'production') {
-  //  app.use('/uploads', express.static('/var/data/uploads'));
   app.use(express.static(path.join(__dirname, '/frontend/dist')));
-
-  /* app.use(
-    '/uploads',
-    express.static(path.join(__dirname, '/frontend/dist/img'))
-  );*/
 } else {
   app.use(
     '/uploads',
